@@ -70,18 +70,55 @@
 //first()
 //second()
 
-const a = 'mobil'
-function kendaraan() {
-    console.log(a)
-}
-kendaraan()
+//const a = 'mobil'
+//function kendaraan() {
+//    console.log(a)
+//}
+//kendaraan()
 
 // tugas bikin 1 global scope, 1 block scope , 1 local scope
-let a = 10 // saya adalah global scope karena ditaruh diluar function atau block apapun
-function f() {
-    const b = 20 // saya adalah local scope karena saya tidak bisa dibaca diluar function f()
-    if(true) {
-        let c = 69 // saya adalah block scope karena saya tidak bisa dibaca di function f()
+//let a = 10 // saya adalah global scope karena ditaruh diluar function atau block apapun
+//function f() {
+//    const b = 20 // saya adalah local scope karena saya tidak bisa dibaca diluar function f()
+//    if(true) {
+//        let c = 69 // saya adalah block scope karena saya tidak bisa dibaca di function f()
+//    }
+//    c = 420 // akan menghasilkan error
+//}
+
+// Closure
+/**
+ * Closure adalah cara mengakses variable dari parent scope didalam child scope
+ */
+
+//function hello(sapa) {
+//    var text = `Assalamu'alaikum ` + sapa
+//    return function () {
+//        console.log(text)
+//    }
+//}
+//hello('Utis')()
+
+//function Counter() {
+//    var count = 0
+//    return function() {
+//        return ++count
+//    }
+//}
+
+//let count = Counter()
+//console.log(count())
+//console.log(count())
+//console.log(count())
+
+// challange:   
+//console.log(`nama : Dias Utsman`)
+//console.log(`kelas : x rpl a`)
+function printBiodata(nama, kelas) {
+    return function() {
+        console.log(`nama : ${nama}`)
+        console.log(`kelas : ${kelas}`)
     }
-    c = 420 // akan menghasilkan error
 }
+var bio = printBiodata('Dias Utsman', 'x rpl a')
+bio()
