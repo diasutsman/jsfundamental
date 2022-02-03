@@ -421,7 +421,7 @@ function cc(s) {
     return s >= 150
 }
 
-function bayarPajak(nilai, callback) {
+function bayarPajakMotor(nilai, callback) {
     console.log(callback(nilai)? `${nilai} harus bayar pajak` : `${nilai} gak usah bayar pajak`)
 }
 
