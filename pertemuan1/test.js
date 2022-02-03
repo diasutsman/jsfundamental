@@ -422,7 +422,7 @@ function cc(s) {
 }
 
 function bayarPajak(nilai, callback) {
-    console.log(callback(nilai)? "harus bayar pajak" : "gak usah bayar pajak")
+    console.log(callback(nilai)? `${nilai} harus bayar pajak` : `${nilai} gak usah bayar pajak`)
 }
 
 bayarPajak(2001, tahun)
