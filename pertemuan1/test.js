@@ -1,3 +1,5 @@
+// js is loosely typed languange
+
 /**
  * *bisa banyak
  * *baris
@@ -251,20 +253,49 @@
 //console.table(identitas);
 
 
-// TODO: buatlah objek sehingga menjadi persis seperti ini
-const table = {
-    kendaraan: {
-        mobil: 'peugeot',
-        motor: 'v-xion',
-        sepeda: 'united'
-    },
-    jalan: 'Jalan berkah',
-    kota: 'bekasi',
-    platNomor: 'jabodetabek',
-    kereta: {
-        namaKa: 'Argo bromo anggrek',
-        tujuan: 'senen - pasar turi'
-    }
-}
+//const table = {
+//    kendaraan: {
+//        mobil: 'peugeot',
+//        motor: 'v-xion',
+//        sepeda: 'united'
+//    },
+//    jalan: 'Jalan berkah',
+//    kota: 'bekasi',
+//    platNomor: 'jabodetabek',
+//    kereta: {
+//        namaKa: 'Argo bromo anggrek',
+//        tujuan: 'senen - pasar turi'
+//    }
+//}
 
-console.table(table)
+//console.table(table)
+
+//const mobil = 'peugeot'
+//const motor = 'ninja'
+
+//
+
+// * template literal
+//console.log('mobil saya adalah '+ mobil +' dan motor saya adalah ' + motor)
+//console.log(`mobil saya adalah ${mobil} dan motor saya adalah ${motor}`)
+
+
+// * shorthand named property
+//let [a, b, c] = [1, 2, true] 
+
+
+
+// * ternary operator
+// * template: condition? true : false
+let a = 9
+
+// * ini yang menggunakan if-else biasa
+//if (a < 10) {
+//    console.log('nilai A kurang dari 10')
+//}else {
+//    console.log('nilai a lebih dari atau sama dengan 10')
+//}
+
+// * ini yang menggunakan ternary operator
+
+a < 10? console.log('nilai A kurang dari 10') :  console.log('nilai a lebih dari atau sama dengan 10')
