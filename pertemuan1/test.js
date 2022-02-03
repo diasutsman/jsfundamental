@@ -54,6 +54,11 @@
  * * 3. let           yes            yes            yes
  */
 
+//* var : tidak punya block scope
+//* const, let : punya block scope
+//* const : constant, tidak bisa diubah
+//* let : bisa diubah
+
 //var a = 'Hallo rekan-rekan'
 //function first() {
 //    console.log(a)
@@ -287,7 +292,7 @@
 
 // * ternary operator
 // * template: condition? true : false
-let a = 9
+//let a = 9
 
 // * ini yang menggunakan if-else biasa
 //if (a < 10) {
@@ -298,4 +303,127 @@ let a = 9
 
 // * ini yang menggunakan ternary operator
 
-a < 10? console.log('nilai A kurang dari 10') :  console.log('nilai a lebih dari atau sama dengan 10')
+//a < 10? console.log('nilai A kurang dari 10') :  console.log('nilai a lebih dari atau sama dengan 10')
+
+/**
+ * * function
+ * * merupakan sebuah blok kode untuk membungkus sebuah proses penulisan kode agar tidak diulang kembali
+ */
+
+//* function biasa
+
+//function name(params) {
+//    console.log("saya belajar javascript")
+//}
+//name()
+
+//* anonymous function
+//* mendeklarasi variabel kemudian dimasukin function tanpa nama (anonymous function)
+//const anon = function(a) {
+//    console.log(a)
+//}
+//anon('Saya belajar javascript')
+
+//* arrow function
+//* gak ada keyword "function"-nya aja
+//const a = () => {
+//    console.log(this)
+//}
+//a()
+
+//const satu = parameter => {
+//    let a = parameter
+//    console.log(a)
+//}
+
+//satu('ini adalah arrow function')
+
+//const dua = function(num1, num2) {
+//    let a = num1, b = num2
+//    console.log(a, b)
+//}
+//dua()
+
+/**
+ ** higher order function
+ ** higher order function adalah fungsi yang mengambil fungsi sebagai "argumen", atau mengembalikan "function"
+ * */
+
+//* normal function
+//* langsung manggil function genap()
+//function genap(number) {
+//    return number % 2 == 0
+//}
+
+//function print(number) {
+//    let isTrue = genap(number)
+//    if (isTrue) {
+//        console.log(`${number} adalah bilangan genap`)
+//    }else {
+//        console.log(`${number} adalah bilangan ganjil`)
+//    }
+//}
+//print(10)
+
+//* Higher order function
+//* manggil function genap() lewat variable callback
+//function genap(number) {
+//    return number % 2 == 0
+//}
+
+//function ganjil(number) {
+//    return number % 2 == 1
+//}
+
+//function print(number, callback) {
+//    const isTrue = callback(number)
+//    if (isTrue) {
+//        console.log(`${number} adalah bilangan genap`)
+//    } else {
+//        console.log(`${number} adalah bilangan ganjil`)
+//    }
+//}
+//print(10, genap)
+
+//function speed(mobil) {
+//    return mobil >= 100
+//}
+
+//function warna(mobil) {
+//    return mobil == 'merah'
+//}
+
+//function kendaraan(mobil, callback) {
+//    let a = callback(mobil)
+//    if(a) {
+//        console.log(`mobil dengan ${mobil} adalah mobil saya`);
+//    }else {
+//        console.log(`mobil dengan ${mobil} bukan mobil saya`);
+//    }
+//}
+
+//kendaraan(80, speed)
+/**
+ **  jadi function speed atau warna itu dijadikan seperti nilai function yang bisa dipanggil
+ */
+
+/**
+ * TODO: terdapat 2 function 
+ * * tahun() = y <= 2001? gak usah bayar pajak : harus bayar pajak
+ * * cc() =  s >= 150 => harus bayar pajak
+ */
+
+function tahun(y) {
+    return y > 2001
+}
+
+function cc(s) {
+    return s >= 150
+}
+
+function bayarPajak(nilai, callback) {
+    console.log(callback(nilai)? "harus bayar pajak" : "gak usah bayar pajak")
+}
+
+bayarPajak(2001, tahun)
+
