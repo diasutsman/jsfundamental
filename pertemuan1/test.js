@@ -425,5 +425,5 @@ function bayarPajak(nilai, callback) {
     console.log(callback(nilai)? `${nilai} harus bayar pajak` : `${nilai} gak usah bayar pajak`)
 }
 
-bayarPajak(2001, tahun)
+bayarPajakMotor(2001, tahun)
 
