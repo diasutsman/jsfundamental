@@ -422,7 +422,7 @@ function cc(s) {
 }
 
 function bayarPajakMotor(nilai, callback) {
-    console.log(`mobil ini ${nilai} ${callback.name}. Jadi, ${callback(nilai)? 'harus' : 'gak usah'} bayar pajak`)
+    console.log(`motor ini ${nilai} ${callback.name}. Jadi, ${callback(nilai)? 'harus' : 'gak usah'} bayar pajak`)
 }
 
 bayarPajakMotor(124, cc)
